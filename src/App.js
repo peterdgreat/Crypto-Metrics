@@ -14,6 +14,7 @@ import './App.css';
 
 function App() {
   const CryptoData = useSelector((state) => state.cryptoreducer.data);
+  console.log(CryptoData);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchCryptoData());
@@ -36,6 +37,7 @@ function App() {
             />
           );
         })}
+        {/* <Route path="crypto/" element={<CryptoDetails />} /> */}
       </Routes>
     </Router>
   );

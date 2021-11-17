@@ -4,7 +4,6 @@ import CryptoList from './CryptoList';
 
 function Crypto() {
   const CryptoData = useSelector((state) => state.cryptoreducer.data);
-  console.log(CryptoData);
 
   return (
     <ul className="container">
