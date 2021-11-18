@@ -8,12 +8,15 @@ function CryptoList(props) {
     <NavLink to={`/crypto/${name}`}>
 
       <li className="list-size">
-        <div className="country">{name}</div>
-        <div>
-          $
-          {price}
+        <div className=" ">
+
+          <div className="country">{name}</div>
+          <div>
+            $
+            {price}
+          </div>
+          <img src={logo} alt={name} className="img-logo" />
         </div>
-        <img src={logo} alt={name} className="img-logo" />
       </li>
     </NavLink>
   );

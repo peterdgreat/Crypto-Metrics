@@ -3,27 +3,27 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  NavLink,
 } from 'react-router-dom';
 
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { fetchCryptoData } from './redux/crypto';
 import CryptoDetails from './components/CryptoDetails';
 import Crypto from './components/Crypto';
 import './App.css';
 
 function App() {
-  const CryptoData = useSelector((state) => state.cryptoreducer.data);
-  console.log(CryptoData);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchCryptoData());
   }, []);
+  const CryptoData = useSelector((state) => state.cryptoreducer.data);
+  console.log(CryptoData);
+  // const dispatch = useDispatch();
+  // useEffect(() => {
+  //   dispatch(fetchCryptoData());
+  // }, []);
   return (
     <Router>
-      <NavLink to="/">
-        <button type="button">Back</button>
-      </NavLink>
       <Routes>
         <Route path="/" element={<Crypto />} />
         { Object.entries(CryptoData).map((data) => {

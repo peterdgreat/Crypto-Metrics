@@ -3,9 +3,10 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import {
   useLocation,
+  NavLink,
 } from 'react-router-dom';
-import CryptoList from './CryptoList';
 // import CryptoList from './CryptoList';
+// // import CryptoList from './CryptoList';
 
 export default function CryptoDetails() {
   const CryptoData = useSelector((state) => state.cryptoreducer.data);
@@ -25,21 +26,27 @@ export default function CryptoDetails() {
   console.log(cryptoList);
 
   return (
-    <ul className="container">
-      {Object.entries(cryptoList).map((data) => {
-        const [key, value] = data;
-        return (
-          <li key={key}>
-            {value.name}
-            {value.price}
-            {value.symbol}
-            {value.rank}
-            {value.circulating_supply}
-            {value.max_supply}
-          </li>
-        );
-      })}
-    </ul>
+    <div>
+      <NavLink to="/">
+        <button type="button">Back</button>
+      </NavLink>
+
+      <ul className="container-fluid">
+        {Object.entries(cryptoList).map((data) => {
+          const [key, value] = data;
+          return (
+            <li key={key}>
+              {value.name}
+              {value.price}
+              {value.symbol}
+              {value.rank}
+              {value.circulating_supply}
+              {value.max_supply}
+            </li>
+          );
+        })}
+      </ul>
+    </div>
 
   );
 }
