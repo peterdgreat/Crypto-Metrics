@@ -17,18 +17,12 @@ function App() {
     dispatch(fetchCryptoData());
   }, []);
   const CryptoData = useSelector((state) => state.cryptoreducer.data);
-  console.log(CryptoData);
-  // const dispatch = useDispatch();
-  // useEffect(() => {
-  //   dispatch(fetchCryptoData());
-  // }, []);
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Crypto />} />
         { Object.entries(CryptoData).map((data) => {
           const [key, value] = data;
-          console.log(value.name);
           return (
             <Route
               key={key}
@@ -37,7 +31,6 @@ function App() {
             />
           );
         })}
-        {/* <Route path="crypto/" element={<CryptoDetails />} /> */}
       </Routes>
     </Router>
   );

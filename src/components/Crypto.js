@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 
 // import SearchIcon from '@mui/icons-material/Search';
 // import IconButton from '@mui/material/IconButton';
+import TextField from '@mui/material/TextField';
 import CryptoList from './CryptoList';
 
 function Crypto() {
@@ -20,18 +21,19 @@ function Crypto() {
   });
 
   return (
-    <div>
-      <input onInput={oninput} value={search} />
+    <div className=" d-flex flex-column  justify-content-center bg">
+      <TextField onInput={oninput} value={search} id="standard-basic" label="Search..." variant="standard" />
 
-      <ul className="container-fluid list-unstyled d-flex flex-wrap justify-content-center">
+      <ul className="d-flex card flex-row flex-wrap justify-content-center">
         {filteredCrypto.map((data) => {
           const [key, value] = data;
           return (
             <CryptoList
               key={key}
               name={value.name}
+              symbol={value.symbol}
               logo={value.logo_url}
-              price={value.price}
+              price={parseInt(value.price, 10).toFixed(2)}
             />
           );
         })}
