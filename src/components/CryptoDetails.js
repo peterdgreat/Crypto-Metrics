@@ -25,8 +25,21 @@ export default function CryptoDetails() {
   console.log(cryptoList);
 
   return (
-    <div>
-      Hello from CryptoDetails
-    </div>
+    <ul className="container">
+      {Object.entries(cryptoList).map((data) => {
+        const [key, value] = data;
+        return (
+          <li key={key}>
+            {value.name}
+            {value.price}
+            {value.symbol}
+            {value.rank}
+            {value.circulating_supply}
+            {value.max_supply}
+          </li>
+        );
+      })}
+    </ul>
+
   );
 }
