@@ -7,7 +7,7 @@ function CryptoList(props) {
   return (
     <NavLink to={`/crypto/${name}`}>
 
-      <li>
+      <li className="list-size">
         <div className="country">{name}</div>
         <div>
           $

@@ -6,7 +6,7 @@ function Crypto() {
   const CryptoData = useSelector((state) => state.cryptoreducer.data);
 
   return (
-    <ul className="container">
+    <ul className="container list-unstyled d-flex flex-wrap justify-content-center">
       {Object.entries(CryptoData).map((data) => {
         const [key, value] = data;
         return (
