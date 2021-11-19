@@ -46,7 +46,7 @@ export default function CryptoDetails() {
               <div className="d-flex  justify-content-between px-5 container align-items-center list-group-item bg">
 
                 <span>Logo</span>
-                <img className="img-logo" src={value.logo_url} alt="logo" />
+                <img className="img-logo" src={value.image} alt="logo" />
 
               </div>
 
@@ -55,7 +55,7 @@ export default function CryptoDetails() {
                 <span>Price</span>
                 <span>
                   $
-                  {value.price}
+                  {value.current_price}
                 </span>
 
               </div>
