@@ -21,7 +21,7 @@ function Crypto() {
     <div className=" d-flex flex-column  justify-content-center container-fluid">
       <header className="d-flex justify-content-center">
         <section>
-          <h1 className="GlobalHeader">Global Stats</h1>
+          <h1 className="GlobalHeader text-center">Global Stats</h1>
           {Object.entries(globalData).map((data) => {
             const [key, value] = data;
             return (

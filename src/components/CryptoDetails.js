@@ -5,8 +5,7 @@ import {
   useLocation,
   NavLink,
 } from 'react-router-dom';
-// import CryptoList from './CryptoList';
-// // import CryptoList from './CryptoList';
+import leftArrow from './left.png';
 
 export default function CryptoDetails() {
   const CryptoData = useSelector((state) => state.cryptoreducer.data);
@@ -27,50 +26,54 @@ export default function CryptoDetails() {
 
   return (
     <div>
-      <NavLink to="/">
-        <button type="button">Back</button>
-      </NavLink>
 
       {Object.entries(cryptoList).map((data) => {
         const [key, value] = data;
         return (
-          <section key={key} className="align">
-            <div className="d-flex  justify-content-around container align-items-center list-group-item bg">
+          <>
+            <section className="container d-flex align-items-center">
+              <NavLink id="bg-r" to="/">
+                <img src={leftArrow} alt="back" className="img-logo" />
+              </NavLink>
+              <span>{value.name}</span>
+            </section>
+            <section key={key} className="align">
+              <div className="d-flex  justify-content-between px-5 container align-items-center list-group-item bg">
 
-              <span>Name</span>
-              {value.name}
-              (
-              {value.symbol}
-              )
+                <span>Name</span>
+                {value.name}
+                (
+                {value.symbol}
+                )
 
-            </div>
-            <div className="d-flex  justify-content-around container align-items-center list-group-item bg">
+              </div>
+              <div className="d-flex  justify-content-between px-5 container align-items-center list-group-item bg">
 
-              <span>Logo</span>
-              <img className="img-logo" src={value.logo_url} alt="logo" />
+                <span>Logo</span>
+                <img className="img-logo" src={value.logo_url} alt="logo" />
 
-            </div>
+              </div>
 
-            <div className="d-flex  justify-content-around container align-items-center list-group-item bg">
+              <div className="d-flex  justify-content-between px-5 container align-items-center list-group-item bg">
 
-              <span>Price</span>
-              <span>
-                $
-                {value.price}
-              </span>
+                <span>Price</span>
+                <span>
+                  $
+                  {value.price}
+                </span>
 
-            </div>
-            <div className="d-flex  justify-content-around container align-items-center list-group-item bg">
+              </div>
+              <div className="d-flex  justify-content-between px-5 container align-items-center list-group-item bg">
 
-              <span>Market Cap</span>
-              <span>
-                $
-                {' '}
-                {value.market_cap}
-              </span>
-            </div>
+                <span>Market Cap</span>
+                <span>
+                  $
+                  {value.market_cap}
+                </span>
+              </div>
 
-          </section>
+            </section>
+          </>
         );
       })}
 

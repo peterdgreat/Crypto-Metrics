@@ -26,8 +26,8 @@ function App() {
   return (
     <Router>
       <header>
-        <nav>
-          Crypto
+        <nav className="d-flex justify-content-center">
+          <h1 className="nav-icon">Cryptocurency</h1>
         </nav>
 
       </header>
