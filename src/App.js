@@ -23,6 +23,8 @@ function App() {
   useEffect(() => {
     dispatch(getGlobalData());
   }, []);
+  const date = new Date();
+  const year = date.getFullYear();
 
   const CryptoData = useSelector((state) => state.cryptoreducer.data);
   return (
@@ -30,7 +32,7 @@ function App() {
       <header className="container">
         <nav className="d-flex">
           <div className="d-flex align-items-center w-100">
-            <h1>2021</h1>
+            <h1>{year}</h1>
             <h1 className="nav-icon">Cryptocurrency</h1>
           </div>
           <div className="d-flex justify-content-end w-100">
