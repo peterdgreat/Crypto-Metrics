@@ -5,28 +5,38 @@ import CryptoList from './CryptoList';
 
 function Crypto() {
   const CryptoData = useSelector((state) => state.cryptoreducer.data);
+  const globalData = useSelector((state) => state.globalreducer.data);
 
   const [search, setSearch] = useState('');
   oninput = (e) => {
-    // update the state
     setSearch(e.target.value);
   };
 
   const filteredCrypto = Object.entries(CryptoData).filter((data) => {
     const [, value] = data;
-    // if not found, return false
     return value.name.toLowerCase().includes(search.toLowerCase());
   });
 
   return (
-    <div className=" d-flex flex-column  justify-content-center container-fluid bg">
+    <div className=" d-flex flex-column  justify-content-center container-fluid">
       <header className="d-flex justify-content-center">
-        <h3>Top 100 Coins</h3>
+        <section>
+          <h1>Global Stats</h1>
+          {Object.entries(globalData).map((data) => {
+            const [key, value] = data;
+            return (
+              <div key={key} className="d-flex justify-content-around container align-items-center list-group-item ">
+                <span>{value.coins_count}</span>
+              </div>
+            );
+          })}
+        </section>
       </header>
       <div className="input-group input-group-sm mb-3 container">
 
         <input className="form-control" onInput={oninput} value={search} placeholder="search..." />
       </div>
+      <h3 className="text-center">Top 100 Coins</h3>
       <div className="row">
         {filteredCrypto.map((data) => {
           const [key, value] = data;

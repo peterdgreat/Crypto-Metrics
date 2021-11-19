@@ -8,6 +8,7 @@ import '@fontsource/lato';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchCryptoData } from './redux/crypto';
+import { getGlobalData } from './redux/global';
 import CryptoDetails from './components/CryptoDetails';
 import Crypto from './components/Crypto';
 import './App.css';
@@ -17,6 +18,10 @@ function App() {
   useEffect(() => {
     dispatch(fetchCryptoData());
   }, []);
+  useEffect(() => {
+    dispatch(getGlobalData());
+  }, []);
+
   const CryptoData = useSelector((state) => state.cryptoreducer.data);
   return (
     <Router>

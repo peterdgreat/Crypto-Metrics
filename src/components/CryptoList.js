@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
+import rightArrow from './right-arrows.png';
 
 function CryptoList(props) {
   const {
@@ -10,13 +11,13 @@ function CryptoList(props) {
     <NavLink className="list-group-item card col-5 d-flex justify-content-end" to={`/crypto/${symbol}`}>
 
       <section className="d-flex  justify-content-between">
-
         <span>
           <img src={logo} alt={name} className="img-logo" />
         </span>
 
         <div>
           <div className="d-flex flex-column">
+            <img src={rightArrow} alt="next" className="img-logo" />
             <span>
               {name}
 
