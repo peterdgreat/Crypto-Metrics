@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import { useSelector } from 'react-redux';
 import {
@@ -14,7 +13,7 @@ export default function CryptoDetails() {
   const { pathname } = useLocation();
   const path = pathname.split('/')[2];
   Object.entries(CryptoData).map((data) => {
-    const [key, value] = data;
+    const [, value] = data;
     if (value.symbol === path) {
       cryptoList.push(value);
     }
@@ -47,7 +46,7 @@ export default function CryptoDetails() {
               <div className="d-flex  justify-content-between px-5 container align-items-center list-group-item bg">
 
                 <span>Logo</span>
-                <img className="img-logo" src={value.logo_url} alt="logo" />
+                <img className="img-logo" src={value.image} alt="logo" />
 
               </div>
 
@@ -56,7 +55,7 @@ export default function CryptoDetails() {
                 <span>Price</span>
                 <span>
                   $
-                  {value.price}
+                  {value.current_price}
                 </span>
 
               </div>

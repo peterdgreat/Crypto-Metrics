@@ -8,7 +8,7 @@ function Crypto() {
   const globalData = useSelector((state) => state.globalreducer.data);
 
   const [search, setSearch] = useState('');
-  oninput = (e) => {
+  const oninput = (e) => {
     setSearch(e.target.value);
   };
 
@@ -59,8 +59,8 @@ function Crypto() {
               key={key}
               name={value.name}
               symbol={value.symbol}
-              logo={value.logo_url}
-              price={parseInt(value.price, 10).toFixed(2)}
+              logo={value.image}
+              price={parseInt(value.current_price, 10).toFixed(2)}
             />
           );
         })}
