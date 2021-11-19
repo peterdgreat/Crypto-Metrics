@@ -1,6 +1,5 @@
-import { render, screen } from '@testing-library/react';
 import renderer from 'react-test-renderer';
-
+import '@testing-library/jest-dom/extend-expect';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Crypto from '../components/Crypto';
@@ -14,19 +13,6 @@ describe('Crypto', () => {
       </Provider>,
     ).toJSON();
     expect(tree).toMatchSnapshot();
-  });
-});
-
-describe('test Crypto component', () => {
-  test('should contain a search placeholder', () => {
-    render(
-      <Provider store={store}>
-        <Router>
-          <Crypto />
-        </Router>
-      </Provider>,
-    );
-    return expect(screen.getByPlaceholderText('search...')).toBeInTheDocument;
   });
 });
 
