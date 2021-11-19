@@ -31,7 +31,6 @@
 
 .bg:nth-child(even) {
   background-color: #e54885;
-
 }
 
 .card:nth-child(4n+1),
@@ -69,15 +68,16 @@ header {
   height: 100vh;
 display: flex;
 flex-direction: column;
-justify-content: center; 
+justify-content: center;
 align-items: center;
 }
 
 .GlobalHeader {
   font-weight: bolder;
 }
+
 .t-col {
-  color:white;
+  color: white;
 }
 
 #bg-r {
