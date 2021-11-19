@@ -42,9 +42,9 @@
 }
 
 ul {
-    margin-block-start: 0;
-    margin-block-end: 0;
-    padding-inline-start: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
 }
 
 .card-m {
@@ -64,10 +64,10 @@ header {
 
 .align {
   height: 100vh;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .GlobalHeader {
