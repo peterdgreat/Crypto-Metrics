@@ -21,13 +21,24 @@ function Crypto() {
     <div className=" d-flex flex-column  justify-content-center container-fluid">
       <header className="d-flex justify-content-center">
         <section>
-          <h1>Global Stats</h1>
+          <h1 className="GlobalHeader">Global Stats</h1>
           {Object.entries(globalData).map((data) => {
             const [key, value] = data;
             return (
-              <div key={key} className="d-flex justify-content-around container align-items-center list-group-item ">
-                <span>{value.coins_count}</span>
-              </div>
+              <section key={key} className="d-flex justify-content-center  align-items-start flex-column ">
+                <div>
+                  <span> Total Coins in Market:</span>
+                  <span>{value.coins_count}</span>
+                </div>
+                <div>
+                  <span> Total Active Market:</span>
+                  <span>{value.active_markets}</span>
+                </div>
+                <div>
+                  <span> Total Market Cap:</span>
+                  <span>{value.total_mcap}</span>
+                </div>
+              </section>
             );
           })}
         </section>
@@ -36,7 +47,7 @@ function Crypto() {
 
         <input className="form-control" onInput={oninput} value={search} placeholder="search..." />
       </div>
-      <h3 className="text-center">Top 100 Coins</h3>
+      <h3 className="text-center t-col">Top 100 Coins</h3>
       <div className="row">
         {filteredCrypto.map((data) => {
           const [key, value] = data;

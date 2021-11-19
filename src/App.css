@@ -63,10 +63,18 @@ header {
   color: #fefefd;
   font-family: 'cabin', Arial, Helvetica, sans-serif;
 }
+
 .align {
   height: 100vh;
 display: flex;
 flex-direction: column;
 justify-content: center; 
 align-items: center;
+}
+
+.GlobalHeader {
+  font-weight: bolder;
+}
+.t-col {
+  color:white;
 }
