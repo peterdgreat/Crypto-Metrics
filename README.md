@@ -4,6 +4,9 @@ This is a mobile web app that  provides simple information about data in the crp
 User can see the current price of any available cryptocurrency, can see the market cap of any cryptocurrency coin and also filter the data based on the users's search.
   
 ![Crypto](./src/components/assets/crptocurrency.png)
+
+## Live demo
+[CryptoMetrics](https://crypto-metrics-d.netlify.app)
 ## Built With
 
 - React
@@ -22,8 +25,8 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 * Open terminal
-* Clone this project by command git clone(https://github.com/peterdgreat/Countries.git)
-* Cd Countries
+* Clone this project by command git clone(https://github.com/peterdgreat/Crypto-Metrics.git)
+* Cd Crypto-Metrics
 
 ### install
 Run the following command to have all npm packages dependencies installed:
