@@ -12,6 +12,8 @@ import { getGlobalData } from './redux/global';
 import CryptoDetails from './components/CryptoDetails';
 import Crypto from './components/Crypto';
 import './App.css';
+import microphone from './components/microphone.png';
+import settings from './components/settings.png';
 
 function App() {
   const dispatch = useDispatch();
@@ -25,9 +27,16 @@ function App() {
   const CryptoData = useSelector((state) => state.cryptoreducer.data);
   return (
     <Router>
-      <header>
-        <nav className="d-flex justify-content-center">
-          <h1 className="nav-icon">Cryptocurency</h1>
+      <header className="container">
+        <nav className="d-flex">
+          <div className="d-flex align-items-center w-100">
+            <h1>2021</h1>
+            <h1 className="nav-icon">Cryptocurrency</h1>
+          </div>
+          <div className="d-flex justify-content-end w-100">
+            <img src={microphone} alt="microphone" className="img-logo" />
+            <img src={settings} alt="settings" className="img-logo" />
+          </div>
         </nav>
 
       </header>

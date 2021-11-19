@@ -36,7 +36,10 @@ function Crypto() {
                 </div>
                 <div>
                   <span> Total Market Cap:</span>
-                  <span>{value.total_mcap}</span>
+                  <span>
+                    $
+                    {value.total_mcap}
+                  </span>
                 </div>
               </section>
             );

@@ -16,7 +16,7 @@ function CryptoList(props) {
         </span>
 
         <div>
-          <div className="d-flex flex-column">
+          <div className="d-flex flex-column align-items-end">
             <img src={rightArrow} alt="next" className="img-logo" />
             <span>
               {name}

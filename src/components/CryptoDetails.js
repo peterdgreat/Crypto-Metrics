@@ -9,12 +9,10 @@ import leftArrow from './left.png';
 
 export default function CryptoDetails() {
   const CryptoData = useSelector((state) => state.cryptoreducer.data);
-  // filter based on the selected country
   const cryptoList = [];
 
   const { pathname } = useLocation();
   const path = pathname.split('/')[2];
-  console.log(path);
   Object.entries(CryptoData).map((data) => {
     const [key, value] = data;
     if (value.symbol === path) {
@@ -22,7 +20,6 @@ export default function CryptoDetails() {
     }
     return cryptoList;
   });
-  console.log(cryptoList);
 
   return (
     <div>
