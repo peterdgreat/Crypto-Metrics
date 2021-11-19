@@ -7,24 +7,33 @@ function CryptoList(props) {
     name, logo, price, symbol,
   } = props;
   return (
-    <NavLink to={`/crypto/${name}`}>
+    <NavLink className="list-group-item card col-5 d-flex justify-content-end" to={`/crypto/${symbol}`}>
 
-      <section className="list-group-item card-body-m">
-        <li className="d-flex flex-column justify-content-end t">
-          <span>
-            {symbol}
-          </span>
+      <section className="d-flex  justify-content-between">
 
+        <span>
+          <img src={logo} alt={name} className="img-logo" />
+        </span>
+
+        <div>
+          <div className="d-flex flex-column">
+            <span>
+              {name}
+
+            </span>
+            <span>
+              (
+              {symbol}
+              )
+            </span>
+          </div>
           <span>
             $
             {price}
 
           </span>
-          <span>
-            <img src={logo} alt={name} className="img-logo" />
-          </span>
 
-        </li>
+        </div>
 
       </section>
     </NavLink>

@@ -18,7 +18,7 @@ export default function CryptoDetails() {
   console.log(path);
   Object.entries(CryptoData).map((data) => {
     const [key, value] = data;
-    if (value.name === path) {
+    if (value.symbol === path) {
       cryptoList.push(value);
     }
     return cryptoList;
@@ -31,21 +31,49 @@ export default function CryptoDetails() {
         <button type="button">Back</button>
       </NavLink>
 
-      <ul className="container-fluid">
-        {Object.entries(cryptoList).map((data) => {
-          const [key, value] = data;
-          return (
-            <li key={key}>
+      {Object.entries(cryptoList).map((data) => {
+        const [key, value] = data;
+        return (
+          <section key={key} className="align">
+            <div className="d-flex  justify-content-around container align-items-center list-group-item bg">
+
+              <span>Name</span>
               {value.name}
-              {value.price}
+              (
               {value.symbol}
-              {value.rank}
-              {value.circulating_supply}
-              {value.max_supply}
-            </li>
-          );
-        })}
-      </ul>
+              )
+
+            </div>
+            <div className="d-flex  justify-content-around container align-items-center list-group-item bg">
+
+              <span>Logo</span>
+              <img className="img-logo" src={value.logo_url} alt="logo" />
+
+            </div>
+
+            <div className="d-flex  justify-content-around container align-items-center list-group-item bg">
+
+              <span>Price</span>
+              <span>
+                $
+                {value.price}
+              </span>
+
+            </div>
+            <div className="d-flex  justify-content-around container align-items-center list-group-item bg">
+
+              <span>Market Cap</span>
+              <span>
+                $
+                {' '}
+                {value.market_cap}
+              </span>
+            </div>
+
+          </section>
+        );
+      })}
+
     </div>
 
   );

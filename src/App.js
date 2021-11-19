@@ -4,6 +4,7 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
+import '@fontsource/lato';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchCryptoData } from './redux/crypto';
@@ -32,7 +33,7 @@ function App() {
           return (
             <Route
               key={key}
-              path={`/crypto/${value.name}`}
+              path={`/crypto/${value.symbol}`}
               element={<CryptoDetails />}
             />
           );

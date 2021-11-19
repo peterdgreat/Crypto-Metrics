@@ -14,16 +14,20 @@ function Crypto() {
 
   const filteredCrypto = Object.entries(CryptoData).filter((data) => {
     const [, value] = data;
+    // if not found, return false
     return value.name.toLowerCase().includes(search.toLowerCase());
   });
 
   return (
-    <div className=" d-flex flex-column  justify-content-center bg">
-      <div className="input-group input-group-sm mb-3">
+    <div className=" d-flex flex-column  justify-content-center container-fluid bg">
+      <header className="d-flex justify-content-center">
+        <h3>Top 100 Coins</h3>
+      </header>
+      <div className="input-group input-group-sm mb-3 container">
 
-        <input className="form-control" onInput={oninput} value={search} />
+        <input className="form-control" onInput={oninput} value={search} placeholder="search..." />
       </div>
-      <ul className="d-flex card-m flex-row flex-wrap justify-content-center">
+      <div className="row">
         {filteredCrypto.map((data) => {
           const [key, value] = data;
           return (
@@ -36,7 +40,7 @@ function Crypto() {
             />
           );
         })}
-      </ul>
+      </div>
     </div>
   );
 }

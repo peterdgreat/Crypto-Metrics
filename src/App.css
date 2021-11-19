@@ -1,12 +1,14 @@
 /* stylelint-disable indentation */
+@import url('https://fonts.googleapis.com/css2?family=lato&family=cabin');
+
 * {
   margin: 0;
   padding: 0;
 }
 
 .img-logo {
-  width: 20px;
-  height: 20px;
+  width: 50px;
+  height: 50px;
 }
 
 .list-group-item {
@@ -17,18 +19,27 @@
   padding-top: 2vh;
   flex: 1;
   min-width: 50%;
-  border: 0;
+  border-radius: 0;
 }
 
 a {
   border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0;
+  min-height: 150px;
 }
 
-a:nth-child(odd) {
+.bg:nth-child(even) {
+  background-color: #e54885;
+
+}
+
+a:nth-child(4n+1),
+a:nth-child(4n+4) {
   background-color: #e54885;
 }
 
-a:nth-child(even) {
+a:nth-child(4n+2),
+a:nth-child(4n+3) {
   background-color: #d14278;
 }
 
@@ -38,24 +49,24 @@ ul {
     padding-inline-start: 0;
 }
 
-.card-body-m {
-  min-width: 155px;
-  min-height: 170px;
-}
-
 .card-m {
   position: relative;
   display: flex;
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  border-radius: 0.25rem;
   color: #fefefd;
+  font-family: 'lato', Arial, Helvetica, sans-serif;
 }
 
-@media screen and (min-width: 350px) {
-.card-body-m {
-  min-width: 180px;
+header {
+  color: #fefefd;
+  font-family: 'cabin', Arial, Helvetica, sans-serif;
 }
+.align {
+  height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center; 
+align-items: center;
 }
-
