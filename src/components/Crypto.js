@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 
-// import SearchIcon from '@mui/icons-material/Search';
-// import IconButton from '@mui/material/IconButton';
-import TextField from '@mui/material/TextField';
 import CryptoList from './CryptoList';
 
 function Crypto() {
@@ -22,9 +19,11 @@ function Crypto() {
 
   return (
     <div className=" d-flex flex-column  justify-content-center bg">
-      <TextField onInput={oninput} value={search} id="standard-basic" label="Search..." variant="standard" />
+      <div className="input-group input-group-sm mb-3">
 
-      <ul className="d-flex card flex-row flex-wrap justify-content-center">
+        <input className="form-control" onInput={oninput} value={search} />
+      </div>
+      <ul className="d-flex card-m flex-row flex-wrap justify-content-center">
         {filteredCrypto.map((data) => {
           const [key, value] = data;
           return (

@@ -19,6 +19,12 @@ function App() {
   const CryptoData = useSelector((state) => state.cryptoreducer.data);
   return (
     <Router>
+      <header>
+        <nav>
+          Crypto
+        </nav>
+
+      </header>
       <Routes>
         <Route path="/" element={<Crypto />} />
         { Object.entries(CryptoData).map((data) => {

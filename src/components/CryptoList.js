@@ -9,8 +9,8 @@ function CryptoList(props) {
   return (
     <NavLink to={`/crypto/${name}`}>
 
-      <li className="list-group-item card-body-m">
-        <div className="d-flex flex-column justify-content-end">
+      <section className="list-group-item card-body-m">
+        <li className="d-flex flex-column justify-content-end t">
           <span>
             {symbol}
           </span>
@@ -24,9 +24,9 @@ function CryptoList(props) {
             <img src={logo} alt={name} className="img-logo" />
           </span>
 
-        </div>
+        </li>
 
-      </li>
+      </section>
     </NavLink>
   );
 }
