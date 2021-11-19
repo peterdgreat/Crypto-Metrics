@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const url2 = 'https://api.nomics.com/v1/currencies/ticker?key=10f9f92a64a43f83cb4520cb9ebba94ffcd02883&interval=1d,30d&convert=USD&per-page=100&page=1';
+const url2 = 'http://api.nomics.com/v1/currencies/ticker?key=10f9f92a64a43f83cb4520cb9ebba94ffcd02883&interval=1d,30d&convert=USD&per-page=100&page=1';
 
 const GET_CRYPTO_DATA = 'GET_crypto_DATA';
 
