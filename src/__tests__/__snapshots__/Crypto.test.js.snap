@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Crypto renders correctly 1`] = `
+<div
+  className=" d-flex flex-column  justify-content-center container-fluid"
+>
+  <header
+    className="d-flex justify-content-center"
+  >
+    <section>
+      <h1
+        className="GlobalHeader text-center"
+      >
+        Global Stats
+      </h1>
+    </section>
+  </header>
+  <div
+    className="input-group input-group-sm mb-3 container"
+  >
+    <input
+      className="form-control"
+      onInput={[Function]}
+      placeholder="search..."
+      value=""
+    />
+  </div>
+  <h3
+    className="text-center t-col"
+  >
+    Top 100 Coins
+  </h3>
+  <div
+    className="row"
+  />
+</div>
+`;
+
+exports[`test with jest snapshot should render correctly 1`] = `
+<div
+  className=" d-flex flex-column  justify-content-center container-fluid"
+>
+  <header
+    className="d-flex justify-content-center"
+  >
+    <section>
+      <h1
+        className="GlobalHeader text-center"
+      >
+        Global Stats
+      </h1>
+    </section>
+  </header>
+  <div
+    className="input-group input-group-sm mb-3 container"
+  >
+    <input
+      className="form-control"
+      onInput={[Function]}
+      placeholder="search..."
+      value=""
+    />
+  </div>
+  <h3
+    className="text-center t-col"
+  >
+    Top 100 Coins
+  </h3>
+  <div
+    className="row"
+  />
+</div>
+`;

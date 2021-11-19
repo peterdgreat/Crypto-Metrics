@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders correctly 1`] = `
+Array [
+  <header
+    className="container mt-3"
+  >
+    <nav
+      className="d-flex"
+    >
+      <div
+        className="d-flex align-items-center w-100"
+      >
+        <h1>
+          2021
+        </h1>
+        <h1
+          className="nav-icon"
+        >
+          Cryptocurrency
+        </h1>
+      </div>
+      <div
+        className="d-flex justify-content-end w-100"
+      >
+        <img
+          alt="microphone"
+          className="img-logo"
+          src="microphone.png"
+        />
+        <img
+          alt="settings"
+          className="img-logo"
+          src="settings.png"
+        />
+      </div>
+    </nav>
+  </header>,
+  <div
+    className=" d-flex flex-column  justify-content-center container-fluid"
+  >
+    <header
+      className="d-flex justify-content-center"
+    >
+      <section>
+        <h1
+          className="GlobalHeader text-center"
+        >
+          Global Stats
+        </h1>
+      </section>
+    </header>
+    <div
+      className="input-group input-group-sm mb-3 container"
+    >
+      <input
+        className="form-control"
+        onInput={[Function]}
+        placeholder="search..."
+        value=""
+      />
+    </div>
+    <h3
+      className="text-center t-col"
+    >
+      Top 100 Coins
+    </h3>
+    <div
+      className="row"
+    />
+  </div>,
+]
+`;

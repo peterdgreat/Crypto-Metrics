@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import { useSelector } from 'react-redux';
 import {
@@ -14,7 +13,7 @@ export default function CryptoDetails() {
   const { pathname } = useLocation();
   const path = pathname.split('/')[2];
   Object.entries(CryptoData).map((data) => {
-    const [key, value] = data;
+    const [, value] = data;
     if (value.symbol === path) {
       cryptoList.push(value);
     }

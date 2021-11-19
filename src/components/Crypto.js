@@ -8,7 +8,7 @@ function Crypto() {
   const globalData = useSelector((state) => state.globalreducer.data);
 
   const [search, setSearch] = useState('');
-  oninput = (e) => {
+  const oninput = (e) => {
     setSearch(e.target.value);
   };
 
