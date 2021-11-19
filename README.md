@@ -1,8 +1,9 @@
-# Title
+# Crypto Metrics
 
-This Bookstore allows you to: Display a list of books. Add a book. Remove a selected book.
+This is a mobile web app that  provides simple information about data in the crptocurrency market.
+User can see the current price of any available cryptocurrency, can see the market cap of any cryptocurrency coin and also filter the data based on the users's search.
   
-![](BookStore.png)
+![Crypto](./src/components/assets/crptocurrency.png)
 ## Built With
 
 - React
@@ -21,8 +22,8 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 * Open terminal
-* Clone this project by command git clone(git@github.com:peterdgreat/books-store.git)
-* Cd books-store
+* Clone this project by command git clone(https://github.com/peterdgreat/Countries.git)
+* Cd Countries
 
 ### install
 Run the following command to have all npm packages dependencies installed:
