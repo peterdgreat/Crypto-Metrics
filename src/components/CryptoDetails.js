@@ -5,7 +5,7 @@ import {
   useLocation,
   NavLink,
 } from 'react-router-dom';
-import leftArrow from './left.png';
+import leftArrow from './assets/left.png';
 
 export default function CryptoDetails() {
   const CryptoData = useSelector((state) => state.cryptoreducer.data);

@@ -12,8 +12,8 @@ import { getGlobalData } from './redux/global';
 import CryptoDetails from './components/CryptoDetails';
 import Crypto from './components/Crypto';
 import './App.css';
-import microphone from './components/microphone.png';
-import settings from './components/settings.png';
+import microphone from './components/assets/microphone.png';
+import settings from './components/assets/settings.png';
 
 function App() {
   const dispatch = useDispatch();
@@ -29,7 +29,7 @@ function App() {
   const CryptoData = useSelector((state) => state.cryptoreducer.data);
   return (
     <Router>
-      <header className="container">
+      <header className="container mt-3">
         <nav className="d-flex">
           <div className="d-flex align-items-center w-100">
             <h1>{year}</h1>
