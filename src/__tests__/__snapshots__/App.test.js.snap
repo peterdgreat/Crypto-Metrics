@@ -6,31 +6,31 @@ Array [
     className="container mt-3"
   >
     <nav
-      className="d-flex"
+      className="d-flex justify-content-around align-items-center"
     >
       <div
-        className="d-flex align-items-center w-100"
+        className="d-flex align-items-center "
       >
         <h1>
           2021
         </h1>
-        <h1
-          className="nav-icon"
-        >
-          Cryptocurrency
-        </h1>
       </div>
+      <h3
+        className="nav-icon"
+      >
+        Cryptocurrency
+      </h3>
       <div
-        className="d-flex justify-content-end w-100"
+        className="d-flex justify-content-end"
       >
         <img
           alt="microphone"
-          className="img-logo"
+          className="img-h me-3"
           src="microphone.png"
         />
         <img
           alt="settings"
-          className="img-logo"
+          className="img-h"
           src="settings.png"
         />
       </div>
@@ -44,7 +44,7 @@ Array [
     >
       <section>
         <h1
-          className="GlobalHeader text-center"
+          className="GlobalHeader pt-5 text-center"
         >
           Global Stats
         </h1>
