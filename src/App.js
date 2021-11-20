@@ -29,14 +29,14 @@ function App() {
   return (
     <Router>
       <header className="container mt-3">
-        <nav className="d-flex">
-          <div className="d-flex align-items-center w-100">
+        <nav className="d-flex justify-content-around align-items-center">
+          <div className="d-flex align-items-center ">
             <h1>{year}</h1>
-            <h1 className="nav-icon">Cryptocurrency</h1>
           </div>
-          <div className="d-flex justify-content-end w-100">
-            <img src={microphone} alt="microphone" className="img-logo" />
-            <img src={settings} alt="settings" className="img-logo" />
+          <h3 className="nav-icon">Cryptocurrency</h3>
+          <div className="d-flex justify-content-end">
+            <img src={microphone} alt="microphone" className="img-h me-3" />
+            <img src={settings} alt="settings" className="img-h" />
           </div>
         </nav>
 

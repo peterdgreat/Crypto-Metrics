@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
+import Search from './Search';
 
 import CryptoList from './CryptoList';
 
@@ -21,7 +22,7 @@ function Crypto() {
     <div className=" d-flex flex-column  justify-content-center container-fluid">
       <header className="d-flex justify-content-center">
         <section>
-          <h1 className="GlobalHeader text-center">Global Stats</h1>
+          <h1 className="GlobalHeader pt-5 text-center">Global Stats</h1>
           {Object.entries(globalData).map((data) => {
             const [key, value] = data;
             return (
@@ -46,10 +47,7 @@ function Crypto() {
           })}
         </section>
       </header>
-      <div className="input-group input-group-sm mb-3 container">
-
-        <input className="form-control" onInput={oninput} value={search} placeholder="search..." />
-      </div>
+      <Search search={search} onInput={oninput} />
       <h3 className="text-center t-col">Top 100 Coins</h3>
       <div className="row">
         {filteredCrypto.map((data) => {
