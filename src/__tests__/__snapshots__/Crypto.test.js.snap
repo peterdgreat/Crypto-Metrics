@@ -9,7 +9,7 @@ exports[`Crypto renders correctly 1`] = `
   >
     <section>
       <h1
-        className="GlobalHeader text-center"
+        className="GlobalHeader pt-5 text-center"
       >
         Global Stats
       </h1>
@@ -45,7 +45,7 @@ exports[`test with jest snapshot should render correctly 1`] = `
   >
     <section>
       <h1
-        className="GlobalHeader text-center"
+        className="GlobalHeader pt-5 text-center"
       >
         Global Stats
       </h1>
