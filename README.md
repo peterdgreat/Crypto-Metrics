@@ -7,6 +7,11 @@ User can see the current price of any available cryptocurrency, can see the mark
 
 ## Live demo
 [CryptoMetrics](https://crypto-metrics-d.netlify.app)
+
+
+## Demo Video
+[Loom Video](https://www.loom.com/share/99c6763445ea456ba96a078965ace87c)
+
 ## Built With
 
 - React
