@@ -1,7 +1,6 @@
 # Crypto Metrics
 
-This is a mobile web app that  provides simple information about data in the crptocurrency market.
-User can see the current price of any available cryptocurrency, can see the market cap of any cryptocurrency coin and also filter the data based on the users's search.
+This is a mobile web app that provides simple information about data in the cryptocurrency market. Users can see the current price of any available cryptocurrency, can see the market cap of any cryptocurrency coin, and also filter the data based on the users' search.
   
 ![Crypto](./src/components/assets/crptocurrency.png)
 
